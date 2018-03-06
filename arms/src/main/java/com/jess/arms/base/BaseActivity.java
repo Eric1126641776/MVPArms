@@ -41,6 +41,7 @@ public abstract class BaseActivity<P extends IPresenter> extends RxAppCompatActi
             if (layoutResID != 0) {//如果initView返回0,框架则不会调用setContentView(),当然也不会 Bind ButterKnife
                 setContentView(layoutResID);
                 //绑定到butterknife
+                //view 注入
                 mUnbinder = ButterKnife.bind(this);
             }
         } catch (Exception e) {
